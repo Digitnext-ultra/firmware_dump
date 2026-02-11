@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Device Info HW Report</title>
+<style>
+	
+	body {
+	  margin: 0;
+	  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	  font-size: 1rem;
+	  font-weight: 400;
+	  line-height: 1.25;
+	  color: #212529;
+	  text-align: left;
+	  background-color: #fff;
+	}
+	
+	.tcommon{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.tcommon td{ 
+		padding:7px; border:#dee2e6 1px solid;
+		
+	}
+	
+	/*
+	/ * provide some minimal visual accomodation for IE8 and below * /
+	.tcommon tr{
+		background: #dee2e6;
+	}
+	/ *  Define the background color for all the ODD background rows * /
+	.tcommon tr:nth-child(odd){ 
+		background: #f2f2f2;
+	}
+	/ *  Define the background color for all the EVEN background rows  * /
+	.tcommon tr:nth-child(even){
+		background: #ffffff;
+	}
+	*/
+	
+	.table-sm th,
+	.table-sm td {
+	  padding: 0.3rem;
+	}
+	
+	.table-striped tbody tr:nth-of-type(odd) {
+	  background-color: rgba(0, 0, 0, 0.05);
+	}
+	
+	.table-responsive {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	.container {
+	  width: 100%;
+	  padding-right: 15px;
+	  padding-left: 15px;
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+	@media (min-width: 576px) {
+	  .container {
+		max-width: 540px;
+	  }
+	}
+	@media (min-width: 768px) {
+	  .container {
+		max-width: 720px;
+	  }
+	}
+	@media (min-width: 992px) {
+	  .container {
+		max-width: 960px;
+	  }
+	}
+	@media (min-width: 1200px) {
+	  .container {
+		max-width: 1140px;
+	  }
+	}
+	.container-fluid {
+	  width: 100%;
+	  padding-right: 15px;
+	  padding-left: 15px;
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+	
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+</style>
+
+</head>
+<body>
+<div class="container">
+	<div class="table-responsive">
+<h4>GENERAL</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>Manufacturer</td><td>Digit</td></tr>
+	<tr><td>Model</td><td>Digitnext_Ultra</td></tr>
+	<tr><td>Brand</td><td>Digit</td></tr>
+	<tr><td>Resolution</td><td>1600x720</td></tr>
+	<tr><td>Platform</td><td>mt6762</td></tr>
+	<tr><td>Android</td><td>13</td></tr>
+	<tr><td>API</td><td>33</td></tr>
+	<tr><td>Kernel</td><td>4.19.191 (nobody@android-build) (Android (6443078 based on r383902) clang version 11.0.1 (https://android.googlesource.com/toolchain/llvm-project b397f81060ce6d701042b782172ed13bee898b79), LLD 11.0.1 (/buildbot/tmp/tmp6_m7QH b397f81060ce6d701042b782172ed13bee898b79)) #1 SMP PREEMPT Thu Jan 11 17:01:46 CST 2024</td></tr>
+	<tr><td>LCM</td><td>icnl9911c_hd1600_dsi_vdo_txd</td></tr>
+	<tr><td>Touchscreen</td><td>chipone-tddi (i2c 0-0041)</td></tr>
+	<tr><td>Accelerometer</td><td>ACCELEROMETER</td></tr>
+	<tr><td>Als/ps</td><td>LIGHT</td></tr>
+	<tr><td>Camera</td><td>s5k3l2_mipiraw</br>bf2553l_mipiraw</br>bf20a1_mipiraw</br>bf20a1_mipiraw</td></tr>
+	<tr><td>Lens AF</td><td>MAIN2AF (i2c 4-000c)</br>MAINAF (i2c 2-000c)</td></tr>
+	<tr><td>Charger</td><td>USE PMIC</td></tr>
+	<tr><td>PMIC</td><td>mt6370_pmu (i2c 5-0034)</td></tr>
+	<tr><td>Fingerprint</td><td>silead_fp_spi (spi0.0)</td></tr>
+	<tr><td>Other</td><td>CAM_CAL_DEV3 (i2c 4-0050)</br>CAM_CAL_DRV (i2c 2-0050)</br>ccu_i2c_2_hwtrg (i2c 2-0010)</br>ccu_i2c_4_hwtrg (i2c 4-0011)</br>kd_camera_hw (i2c 2-001a)</br>kd_camera_hw_bus2 (i2c 4-002d)</br>kd_camera_hw_bus3 (i2c 4-003d)</br>speaker_amp (i2c 3-0034)</br>usb_type_c (i2c 5-004e)</td></tr>
+	<tr><td>Wi-Fi</td><td>CONSYS_MT6765</td></tr>
+	<tr><td>Sound</td><td>mt63xxaccdet</td></tr>
+	<tr><td>RAM</td><td>4 GB</td></tr>
+	<tr><td>Flash</td><td>Samsung RH64MB</td></tr>
+	<tr><td>Flash size</td><td>64 GB</td></tr>
+	<tr><td>Cmdline</td><td>console=tty0 console=ttyS0,921600n1 vmalloc=400M slub_debug=OFZPU page_owner=on swiotlb=noforce androidboot.hardware=mt6765 maxcpus=8 loop.max_part=7 firmware_class.path=/vendor/firmware has_battery_removed=0 loop.max_part=7 androidboot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc,soc/11230000.msdc,11230000.msdc ramoops.mem_address=0x47c90000 ramoops.mem_size=0xe0000 ramoops.pmsg_size=0x10000 ramoops.console_size=0x40000 bootopt=64S3,32N2,64N2 buildvariant=eng root=/dev/ram  androidboot.slot_suffix=_a androidboot.slot=a androidboot.verifiedbootstate=orange androidboot.atm=disabled androidboot.force_normal_boot=1 androidboot.meta_log_disable=0 mtk_printk_ctrl.disable_uart=1 androidboot.serialno=6DSOVW5HQ49D9DZ5 androidboot.conutry_code=0 androidboot.bootreason=PMIC_cold_reboot gpt=1 usb2jtag_mode=0 androidboot.dtb_idx=0 androidboot.dtbo_idx=0</td></tr>
+
+</table><h4>SOC</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>SoC</td><td>Helio P22</td></tr>
+	<tr><td>CPU</td><td>MT6762V/CB</td></tr>
+	<tr><td>Vendor</td><td>MediaTek</td></tr>
+	<tr><td>Model</td><td>MT6762</td></tr>
+	<tr><td>Cores</td><td>8</td></tr>
+	<tr><td>big.LITTLE</td><td>2 clusters</td></tr>
+	<tr><td>Clusters</td><td>4 x 2.00 GHz</br>4 x 1.50 GHz</td></tr>
+	<tr><td>Family</td><td>Cortex-A53</br>Cortex-A53</td></tr>
+	<tr><td>Mode</td><td>64-bit</td></tr>
+	<tr><td>Machine</td><td>aarch64</td></tr>
+	<tr><td>ABI</td><td>arm64-v8a</td></tr>
+	<tr><td>Instructions</td><td>fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid</td></tr>
+	<tr><td>Process technology</td><td>12 nm</td></tr>
+	<tr><td>Revision</td><td>r0p4</br>r0p4</td></tr>
+	<tr><td>Clock speed</td><td>400 - 2001 MHz</td></tr>
+	<tr><td>GPU</td><td>PowerVR Rogue GE8320</td></tr>
+	<tr><td>Vendor</td><td>Imagination Technologies</td></tr>
+	<tr><td>OpenGL ES</td><td>3.2 build 1.13@5776728</td></tr>
+	<tr><td>Vulkan</td><td>1.1</td></tr>
+	<tr><td>Clock speed</td><td>400 - 650 MHz</td></tr>
+
+</table><h4>SYSTEM</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>Manufacturer</td><td>Digit</td></tr>
+	<tr><td>Model</td><td>Digitnext_Ultra</td></tr>
+	<tr><td>Brand</td><td>Digit</td></tr>
+	<tr><td>Android</td><td>13</td></tr>
+	<tr><td>API</td><td>33</td></tr>
+	<tr><td>Codename</td><td>Tiramisu</td></tr>
+	<tr><td>Device</td><td>Digitnext_Ultra</td></tr>
+	<tr><td>Product</td><td>Digitnext_Ultra</td></tr>
+	<tr><td>Board</td><td>k62v1_64_bsp</td></tr>
+	<tr><td>Build</td><td>SP1A.210812.016</td></tr>
+	<tr><td>Java VM</td><td>ART 2.1.0</td></tr>
+	<tr><td>Security</td><td>2024-01-01</td></tr>
+	<tr><td>Baseband</td><td>MOLY.LR12A.R3.MP.V298,MOLY.LR12A.R3.MP.V298</td></tr>
+	<tr><td>GPS</td><td>MTK_MNLD_default,MNL_VER_default / 2020</td></tr>
+	<tr><td>Build type</td><td>user</td></tr>
+	<tr><td>Tags</td><td>release-keys</td></tr>
+	<tr><td>Incremental</td><td>1704853980</td></tr>
+	<tr><td>Fingerprint</td><td>Digit/Digitnext_Ultra/Digitnext_Ultra:13/SP1A.210812.016/1704853980:user/release-keys</td></tr>
+	<tr><td>Build date</td><td>16.01.2024</td></tr>
+	<tr><td>Builder</td><td>yang@yang-PC</td></tr>
+	<tr><td>Google Play Services</td><td>25.47.30 (190400-833691957)</td></tr>
+	<tr><td>Language</td><td>English (Pakistan)</td></tr>
+	<tr><td>Timezone</td><td>Pakistan Standard Time (GMT+05:00)</td></tr>
+	<tr><td>Uptime</td><td>0 days 02:26</td></tr>
+
+</table><h4>SCREEN</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>Resolution</td><td>1600x720</td></tr>
+	<tr><td>Ratio</td><td>20 : 9</td></tr>
+	<tr><td>Diagonal</td><td>~ 6.51 - 6.54" / 165 - 166 mm</td></tr>
+	<tr><td>Size</td><td>65 x 152 mm</td></tr>
+	<tr><td>Density</td><td>320 (xhdpi)</td></tr>
+	<tr><td>X DPI</td><td>282</td></tr>
+	<tr><td>Y DPI</td><td>267</td></tr>
+	<tr><td>PPI</td><td>270</td></tr>
+	<tr><td>Refresh rate</td><td>60.0 Hz</td></tr>
+	<tr><td>Modes</td><td>720x1600@60.0 Hz</td></tr>
+
+</table><h4>CAMERA</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>Model</td><td>13.0 MP Samsung s5k3l2_mipiraw</br>BYD bf2553l_mipiraw</br>BYD bf20a1_mipiraw</br>BYD bf20a1_mipiraw</td></tr>
+	<tr><td>Supported</td><td>13.0 MP Samsung s5k3l2_mipi_raw</br>5.0 MP GalaxyCore gc5035_mipi_raw</br>2.0 MP BYD bf2253l_mipi_raw</br>0.3 MP GalaxyCore gc030a_mipi_raw</br>BYD bf20a1_mipi_raw</br>BYD bf2553l_mipi_raw</td></tr>
+	<tr><td colspan='2'>SOFTWARE</td></tr>
+	<tr><td>Camera</td><td>0 - BACK</td></tr>
+	<tr><td>Resolution</td><td>12.6 MP (4096x3072)</td></tr>
+	<tr><td>Aperture</td><td>f/2.0</td></tr>
+	<tr><td>Focal length</td><td>2.85 mm</td></tr>
+	<tr><td>Focal length (equivalent 35 mm)</td><td>21.0 mm</td></tr>
+	<tr><td>Focus modes</td><td>infinity, auto, macro, continuous-video, continuous-picture</td></tr>
+	<tr><td>Sensor size</td><td>4.71x3.49</td></tr>
+	<tr><td>Diagonal</td><td>5.87 mm</td></tr>
+	<tr><td>Pixel size</td><td>~1.14 µm</td></tr>
+	<tr><td>Optical format</td><td>~1/2.73" (1/3.07")</td></tr>
+	<tr><td>Zoom</td><td>4.0x</td></tr>
+	<tr><td>Image formats</td><td>JPEG, YUV_420_888, YV12</td></tr>
+	<tr><td>Angle of view</td><td>91.7&deg; (D)</br>79.2&deg; (H)</td></tr>
+	<tr><td>Crop factor</td><td>7.4x</td></tr>
+	<tr><td>ISO</td><td>100-2400</td></tr>
+	<tr><td>Color filter</td><td>GRBG</td></tr>
+	<tr><td>Orientation</td><td>90</td></tr>
+	<tr><td>Flash</td><td>yes</td></tr>
+	<tr><td>Video</td><td>Full HD 1920x1080@30fps</br>HD 1280x720@30fps</td></tr>
+	<tr><td colspan='2'></td></tr>
+	<tr><td>Camera</td><td>1 - FRONT</td></tr>
+	<tr><td>Resolution</td><td>4.9 MP (2560x1920)</td></tr>
+	<tr><td>Aperture</td><td>f/2.0</td></tr>
+	<tr><td>Focal length</td><td>2.34 mm</td></tr>
+	<tr><td>Focal length (equivalent 35 mm)</td><td>27.9 mm</td></tr>
+	<tr><td>Focus modes</td><td>infinity</td></tr>
+	<tr><td>Sensor size</td><td>2.9x2.18</td></tr>
+	<tr><td>Diagonal</td><td>3.63 mm</td></tr>
+	<tr><td>Pixel size</td><td>~1.13 µm</td></tr>
+	<tr><td>Optical format</td><td>~1/4.41" (1/4.96")</td></tr>
+	<tr><td>Zoom</td><td>4.0x</td></tr>
+	<tr><td>Image formats</td><td>JPEG, YUV_420_888, YV12</td></tr>
+	<tr><td>Angle of view</td><td>75.6&deg; (D)</br>63.6&deg; (H)</td></tr>
+	<tr><td>Crop factor</td><td>11.9x</td></tr>
+	<tr><td>ISO</td><td>100-2000</td></tr>
+	<tr><td>Color filter</td><td>BGGR</td></tr>
+	<tr><td>Orientation</td><td>270</td></tr>
+	<tr><td>Flash</td><td>no</td></tr>
+	<tr><td>Video</td><td>Full HD 1920x1080@30fps</br>HD 1280x720@30fps</td></tr>
+	<tr><td colspan='2'></td></tr>
+	<tr><td>Camera</td><td>2 - BACK</td></tr>
+	<tr><td>Resolution</td><td>0.3 MP (640x480)</td></tr>
+	<tr><td>Aperture</td><td>f/2.0</td></tr>
+	<tr><td>Focal length</td><td>1.47 mm</td></tr>
+	<tr><td>Focal length (equivalent 35 mm)</td><td>36.1 mm</td></tr>
+	<tr><td>Focus modes</td><td>infinity</td></tr>
+	<tr><td>Sensor size</td><td>1.41x1.06</td></tr>
+	<tr><td>Diagonal</td><td>1.76 mm</td></tr>
+	<tr><td>Pixel size</td><td>~2.2 µm</td></tr>
+	<tr><td>Optical format</td><td>~1/9.09" (1/10.23")</td></tr>
+	<tr><td>Zoom</td><td>4.0x</td></tr>
+	<tr><td>Image formats</td><td>JPEG, YUV_420_888, YV12</td></tr>
+	<tr><td>Angle of view</td><td>61.8&deg; (D)</br>51.2&deg; (H)</td></tr>
+	<tr><td>Crop factor</td><td>24.6x</td></tr>
+	<tr><td>ISO</td><td>100-2000</td></tr>
+	<tr><td>Color filter</td><td>BGGR</td></tr>
+	<tr><td>Orientation</td><td>90</td></tr>
+	<tr><td>Flash</td><td>no</td></tr>
+	<tr><td>Video</td><td>HD 1280x720@30fps</td></tr>
+	<tr><td colspan='2'></td></tr>
+	<tr><td>Camera</td><td>3 - BACK</td></tr>
+	<tr><td>Resolution</td><td>0.3 MP (640x480)</td></tr>
+	<tr><td>Aperture</td><td>f/2.0</td></tr>
+	<tr><td>Focal length</td><td>1.47 mm</td></tr>
+	<tr><td>Focal length (equivalent 35 mm)</td><td>36.1 mm</td></tr>
+	<tr><td>Focus modes</td><td>infinity</td></tr>
+	<tr><td>Sensor size</td><td>1.41x1.06</td></tr>
+	<tr><td>Diagonal</td><td>1.76 mm</td></tr>
+	<tr><td>Pixel size</td><td>~2.2 µm</td></tr>
+	<tr><td>Optical format</td><td>~1/9.09" (1/10.23")</td></tr>
+	<tr><td>Zoom</td><td>4.0x</td></tr>
+	<tr><td>Image formats</td><td>JPEG, YUV_420_888, YV12</td></tr>
+	<tr><td>Angle of view</td><td>61.8&deg; (D)</br>51.2&deg; (H)</td></tr>
+	<tr><td>Crop factor</td><td>24.6x</td></tr>
+	<tr><td>ISO</td><td>100-2000</td></tr>
+	<tr><td>Color filter</td><td>BGGR</td></tr>
+	<tr><td>Orientation</td><td>90</td></tr>
+	<tr><td>Flash</td><td>no</td></tr>
+	<tr><td>Video</td><td>HD 1280x720@30fps</td></tr>
+	<tr><td colspan='2'></td></tr>
+	<tr><td>Camera2 API</td><td>full</td></tr>
+
+</table><h4>BATTERY</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>Level</td><td>100 %</td></tr>
+	<tr><td>Health</td><td>Good</td></tr>
+	<tr><td>Status</td><td>Charging</td></tr>
+	<tr><td>Power source</td><td>USB</td></tr>
+	<tr><td>Technology</td><td>Li-ion</td></tr>
+	<tr><td>Temperature</td><td>21.7 &deg;C</td></tr>
+	<tr><td>Voltage</td><td>4417 mV</td></tr>
+	<tr><td>Charge speed</td><td>28.3 mA</td></tr>
+	<tr><td>Power profile</td><td>5000 mAh</td></tr>
+	<tr><td>Kernel profile</td><td>2946 mAh</td></tr>
+
+</table><h4>THERMAL</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>mtktsbattery</td><td>23.4 &deg;C</td></tr>
+	<tr><td>mtktsAP</td><td>26.0 &deg;C</td></tr>
+	<tr><td>mtktsbtsmdpa</td><td>24.0 &deg;C</td></tr>
+	<tr><td>mtktscpu</td><td>30.6 &deg;C</td></tr>
+	<tr><td>mtktswmt</td><td>25.0 &deg;C</td></tr>
+	<tr><td>mtktspmic</td><td>28.4 &deg;C</td></tr>
+	<tr><td>mt6357tsbuck1</td><td>26.2 &deg;C</td></tr>
+	<tr><td>mt6357tsbuck2</td><td>28.3 &deg;C</td></tr>
+	<tr><td>battery</td><td>23.4 &deg;C</td></tr>
+	<tr><td>mtktscharger</td><td>26.0 &deg;C</td></tr>
+
+</table><h4>PARTITIONS</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>Name</td><td>Start address</br>Partition size</td></tr>
+	<tr><td>boot_para</br>mmcblk0p1</td><td>0x0000008000</br>0x0000100000</td></tr>
+	<tr><td>para</br>mmcblk0p2</td><td>0x0000108000</br>0x0000080000</td></tr>
+	<tr><td>expdb</br>mmcblk0p3</td><td>0x0000188000</br>0x0001400000</td></tr>
+	<tr><td>frp</br>mmcblk0p4</td><td>0x0001588000</br>0x0000100000</td></tr>
+	<tr><td>nvcfg</br>mmcblk0p5</td><td>0x0001688000</br>0x0002000000</td></tr>
+	<tr><td>nvdata</br>mmcblk0p6</td><td>0x0003688000</br>0x0004000000</td></tr>
+	<tr><td>md_udc</br>mmcblk0p7</td><td>0x0007688000</br>0x000169a000</td></tr>
+	<tr><td>metadata</br>mmcblk0p8</td><td>0x0008d22000</br>0x0002000000</td></tr>
+	<tr><td>protect1</br>mmcblk0p9</td><td>0x000ad22000</br>0x0000800000</td></tr>
+	<tr><td>protect2</br>mmcblk0p10</td><td>0x000b522000</br>0x0000ade000</td></tr>
+	<tr><td>seccfg</br>mmcblk0p11</td><td>0x000c000000</br>0x0000800000</td></tr>
+	<tr><td>persist</br>mmcblk0p12</td><td>0x000c800000</br>0x0003000000</td></tr>
+	<tr><td>sec1</br>mmcblk0p13</td><td>0x000f800000</br>0x0000200000</td></tr>
+	<tr><td>proinfo</br>mmcblk0p14</td><td>0x000fa00000</br>0x0000300000</td></tr>
+	<tr><td>nvram</br>mmcblk0p15</td><td>0x000fd00000</br>0x0004000000</td></tr>
+	<tr><td>logo</br>mmcblk0p16</td><td>0x0013d00000</br>0x0000b00000</td></tr>
+	<tr><td>md1img_a</br>mmcblk0p17</td><td>0x0014800000</br>0x0006400000</td></tr>
+	<tr><td>spmfw_a</br>mmcblk0p18</td><td>0x001ac00000</br>0x0000100000</td></tr>
+	<tr><td>scp_a</br>mmcblk0p19</td><td>0x001ad00000</br>0x0000100000</td></tr>
+	<tr><td>sspm_a</br>mmcblk0p20</td><td>0x001ae00000</br>0x0000100000</td></tr>
+	<tr><td>gz_a</br>mmcblk0p21</td><td>0x001af00000</br>0x0001000000</td></tr>
+	<tr><td>lk_a</br>mmcblk0p22</td><td>0x001bf00000</br>0x0000100000</td></tr>
+	<tr><td>boot_a</br>mmcblk0p23</td><td>0x001c000000</br>0x0006000000</td></tr>
+	<tr><td>init_boot_a</br>mmcblk0p24</td><td>0x0022000000</br>0x0000800000</td></tr>
+	<tr><td>dtbo_a</br>mmcblk0p25</td><td>0x0022800000</br>0x0000800000</td></tr>
+	<tr><td>tee_a</br>mmcblk0p26</td><td>0x0023000000</br>0x0000500000</td></tr>
+	<tr><td>vbmeta_a</br>mmcblk0p27</td><td>0x0023500000</br>0x0000800000</td></tr>
+	<tr><td>vbmeta_system_a</br>mmcblk0p28</td><td>0x0023d00000</br>0x0000800000</td></tr>
+	<tr><td>vbmeta_vendor_a</br>mmcblk0p29</td><td>0x0024500000</br>0x0000b00000</td></tr>
+	<tr><td>md1img_b</br>mmcblk0p30</td><td>0x0025000000</br>0x0006400000</td></tr>
+	<tr><td>spmfw_b</br>mmcblk0p31</td><td>0x002b400000</br>0x0000100000</td></tr>
+	<tr><td>scp_b</br>mmcblk0p32</td><td>0x002b500000</br>0x0000100000</td></tr>
+	<tr><td>sspm_b</br>mmcblk0p33</td><td>0x002b600000</br>0x0000100000</td></tr>
+	<tr><td>gz_b</br>mmcblk0p34</td><td>0x002b700000</br>0x0001000000</td></tr>
+	<tr><td>lk_b</br>mmcblk0p35</td><td>0x002c700000</br>0x0000100000</td></tr>
+	<tr><td>boot_b</br>mmcblk0p36</td><td>0x002c800000</br>0x0006000000</td></tr>
+	<tr><td>init_boot_b</br>mmcblk0p37</td><td>0x0032800000</br>0x0000800000</td></tr>
+	<tr><td>dtbo_b</br>mmcblk0p38</td><td>0x0033000000</br>0x0000800000</td></tr>
+	<tr><td>tee_b</br>mmcblk0p39</td><td>0x0033800000</br>0x0000800000</td></tr>
+	<tr><td>super</br>mmcblk0p40</td><td>0x0034000000</br>0x0168a00000</td></tr>
+	<tr><td>vbmeta_b</br>mmcblk0p41</td><td>0x019ca00000</br>0x0000800000</td></tr>
+	<tr><td>vbmeta_system_b</br>mmcblk0p42</td><td>0x019d200000</br>0x0000800000</td></tr>
+	<tr><td>vbmeta_vendor_b</br>mmcblk0p43</td><td>0x019da00000</br>0x0000e00000</td></tr>
+	<tr><td>userdata</br>mmcblk0p44</td><td>0x019e800000</br>0x0ced4f8000</td></tr>
+	<tr><td>otp</br>mmcblk0p45</td><td>0x0e8bcf8000</br>0x0002b00000</td></tr>
+	<tr><td>flashinfo</br>mmcblk0p46</td><td>0x0e8e7f8000</br>0x0001000000</td></tr>
+
+</table><h4>DRIVERS</h4>CAM_CAL_DRV
+DISPSYS
+Routing-Control
+Vcodec
+accel_hub_pl
+alarmtimer
+als_ps
+alsps_hub_pl
+amms
+atf_logger
+camera-dpe
+camera-fdvt
+camera-isp
+ccci_auxadc
+ccci_hif_ccif
+ccci_hif_cldma
+ccu
+charger
+cirq
+clk-mt6765
+clk-mt6765-audio
+clk-mt6765-cam
+clk-mt6765-img
+clk-mt6765-mipi0a
+clk-mt6765-mm
+clk-mt6765-scpsys
+clk-mt6765-vcodec
+devapc
+driver_modem
+dvfsp
+emi_clk_test
+emi_ctrl
+flashlight
+flashlights-mt6370
+fm
+ged
+gpio-keys
+gpufreq
+gsensor
+hps
+image_sensor
+ion-drv
+leds-mt65xx
+lens_actuator_main2_af
+lens_actuator_main3_af
+lens_actuator_main_af
+lens_actuator_sub2_af
+lens_actuator_sub_af
+low_battery_throttling
+m4u
+masp
+mediatek,devinfo
+mt-cpufreq
+mt-eem
+mt-freqhopping
+mt-i2c
+mt-pmic-pwrap
+mt-ppm
+mt-soc-dai-driver
+mt-soc-deep-buffer-dl-pcm
+mt-soc-dl1-awb-pcm
+mt-soc-dl1-pcm
+mt-soc-dl2-pcm
+mt-soc-dummy-codec
+mt-soc-dummy-pcm
+mt-soc-fm-i2s-awb-pcm
+mt-soc-fm-i2s-pcm
+mt-soc-fmmrgtx-pcm
+mt-soc-hp-impedence-pcm
+mt-soc-i2s0-pcm
+mt-soc-i2s0awb-pcm
+mt-soc-i2s0dl1-pcm
+mt-soc-i2s2_adc2-pcm
+mt-soc-mrgrx-awb-pcm
+mt-soc-mrgrx-pcm
+mt-soc-routing-pcm
+mt-soc-tdmrx-pcm
+mt-soc-ul1-pcm
+mt-soc-ul2-pcm
+mt-soc-uldlloopback-pcm
+mt-soc-voice-usb
+mt-soc-voice-usb-echoref
+mt-soc-voicemd1
+mt-soc-voicemd1-bt
+mt-soc-voicemd2
+mt-soc-voicemd2-bt
+mt-soc-voip-bt-in
+mt-soc-voip-bt-out
+mt6357-charger-type-detection
+mt6357-regulator
+mt6357-sound
+mt6357_gauge
+mt6357_ts_buck1
+mt6357_ts_buck2
+mt6359-efuse
+mt635x-auxadc
+mt6370_pmu_bled
+mt6370_pmu_charger
+mt6370_pmu_core
+mt6370_pmu_dsv
+mt6370_pmu_fled
+mt6370_pmu_ldo
+mt6397
+mt6397-rtc
+mt63xx-oc-debug
+mt6577-auxadc
+mt6577-uart
+mt6761-qos
+mt6765-cm_mgr
+mt6765-pinctrl
+mt6765-sspm
+mt67xx_rng
+mt_udi
+mt_usb
+mtboard-thermistor1
+mtboard-thermistor2
+mtk-audio
+mtk-btcvsd-snd
+mtk-clock-buffer
+mtk-dram_ctrl
+mtk-dvfsrc
+mtk-dvfsrc-debug
+mtk-dvfsrc-met
+mtk-dvfsrc-up
+mtk-extcon-usb
+mtk-kpd
+mtk-msdc
+mtk-pmic-keys
+mtk-smi-common
+mtk-smi-larb
+mtk-spi
+mtk-thermal-legacy
+mtk-tpd
+mtk-tphy
+mtk-wdt
+mtk_battery_oc_throttling
+mtk_btif
+mtk_cmdq
+mtk_cmdq_mbox
+mtk_cmdq_tee_mbox
+mtk_connfem
+mtk_dbgtop
+mtk_disp_mgr
+mtk_dynamic_loading_throttling
+mtk_jpeg
+mtk_mmdvfs_pmqos
+mtk_ts_pmic
+mtk_uart_apdma
+mtk_wmt
+mtkfb
+mtktscharger
+mtktscharger2
+musb-hdrc
+nanohub_ipi
+pd
+pd_adapter
+perfmgr
+plat_sram_flag
+pmic-codec-accdet
+pmic_lbat_service
+pvrsrvkm
+ramoops
+reg-dummy
+regulator_vibrator
+rt-flash-led
+rt-pd-manager
+scp
+scpdvfs
+scpsys
+sensor_hub_pl
+serial8250
+snd-soc-dummy
+spm
+step_counter
+sys_timer
+syscon-reboot-mode
+systracker
+tee_sanity
+trusted_mem
+trusty
+trusty-gz-log
+trusty-irq
+trusty-virtio
+trusty_gz
+usb_phy_generic
+utos
+wlan<h4>PMIC</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>vs1</td><td>2.100 V</td></tr>
+	<tr><td>vemc</td><td>3.000 V</td></tr>
+	<tr><td>vcn18</td><td>1.800 V</td></tr>
+	<tr><td>vcore</td><td>0.700 V</td></tr>
+	<tr><td>vdram</td><td>1.200 V</td></tr>
+	<tr><td>vio18</td><td>1.800 V</td></tr>
+	<tr><td>vio28</td><td>2.800 V</td></tr>
+	<tr><td>vproc</td><td>0.781 V</td></tr>
+	<tr><td>vsim2</td><td>3.000 V</td></tr>
+	<tr><td>vxo22</td><td>2.200 V</td></tr>
+	<tr><td>vaud28</td><td>2.800 V</td></tr>
+	<tr><td>vaux18</td><td>1.800 V</td></tr>
+	<tr><td>vmodem</td><td>0.700 V</td></tr>
+	<tr><td>vusb33</td><td>3.000 V</td></tr>
+	<tr><td>dsv_neg</td><td>5.750 V</td></tr>
+	<tr><td>dsv_pos</td><td>5.750 V</td></tr>
+	<tr><td>vcn33_bt</td><td>3.300 V</td></tr>
+	<tr><td>vsram_proc</td><td>0.881 V</td></tr>
+	<tr><td>vsram_others</td><td>0.900 V</td></tr>
+	<tr><td>vmc</td><td>3.000 V</td></tr>
+	<tr><td>vpa</td><td>0.500 V</td></tr>
+	<tr><td>vibr</td><td>2.800 V</td></tr>
+	<tr><td>vmch</td><td>3.000 V</td></tr>
+	<tr><td>vcama</td><td>2.800 V</td></tr>
+	<tr><td>vcamd</td><td>1.200 V</td></tr>
+	<tr><td>vcn28</td><td>2.800 V</td></tr>
+	<tr><td>vfe28</td><td>2.800 V</td></tr>
+	<tr><td>vrf12</td><td>1.200 V</td></tr>
+	<tr><td>vrf18</td><td>1.800 V</td></tr>
+	<tr><td>vsim1</td><td>3.000 V</td></tr>
+	<tr><td>vcamio</td><td>1.800 V</td></tr>
+	<tr><td>vefuse</td><td>1.800 V</td></tr>
+	<tr><td>vldo28</td><td>2.800 V</td></tr>
+	<tr><td>irtx_ldo</td><td>3.400 V</td></tr>
+	<tr><td>vcn33_wifi</td><td>3.300 V</td></tr>
+	<tr><td>usb-otg-vbus</td><td>5.050 V</td></tr>
+
+</table><h4>WI-FI</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td colspan='2'>Connection</td></tr>
+	<tr><td>IPv4</td><td>192.168.100.62</td></tr>
+	<tr><td>IPv6</td><td>fe80::d88d:4aff:fe1f:f189</td></tr>
+	<tr><td>Link speed</td><td>175 Mbps</td></tr>
+	<tr><td>Standard</td><td>802.11ac</td></tr>
+	<tr><td>Frequency</td><td>5745 MHz</td></tr>
+	<tr><td>Channel</td><td>149</td></tr>
+	<tr><td>Signal</td><td>-83 dBm</td></tr>
+	<tr><td>Level</td><td>37 %</td></tr>
+	<tr><td colspan='2'>Wi-Fi 5 (802.11ac)</td></tr>
+	<tr><td>Band 5 GHz</td><td>+</td></tr>
+	<tr><td>Band 6 GHz</td><td>-</td></tr>
+	<tr><td>Wi-Fi Direct</td><td>+</td></tr>
+	<tr><td>WPA3</td><td>+</td></tr>
+
+</table><h4>INPUT</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td><b>mtk-pmic-keys</b></br>id: 2 vendor: 1 product: 1 </br>485d69228e24f5e46da1598745890b214130dbc4 </td></tr>
+	<tr><td><b>mtk-kpd</b></br>id: 3 vendor: 0 product: 0 </br>9a244e01c90550ca2eb2798ffe20d8731e811765 </td></tr>
+	<tr><td><b>mtk-tpd</b></br>id: 4 vendor: 0 product: 0 touch: 1600x720 </br>84931e976ab60191371c1c95baf408538ca4c4c5 </td></tr>
+	<tr><td><b>mt63xx-accdet Headset</b></br>id: 5 vendor: 0 product: 0 </br>bd2ae01791065c5d52524d44e3014e633617ea7a </td></tr>
+
+</table><h4>CODECS</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>c2.mtk.mp3.decoder</td><td>audio/mpeg</td></tr>
+	<tr><td>OMX.MTK.AUDIO.DECODER.MP3</td><td>audio/mpeg</td></tr>
+	<tr><td>c2.mtk.adpcm-dvi-ima.decoder</td><td>audio/x-adpcm-dvi-ima</td></tr>
+	<tr><td>OMX.MTK.AUDIO.DECODER.ADPCM.DVI</td><td>audio/x-adpcm-dvi-ima</td></tr>
+	<tr><td>c2.mtk.adpcm-ms.decoder</td><td>audio/x-adpcm-ms</td></tr>
+	<tr><td>OMX.MTK.AUDIO.DECODER.ADPCM.MS</td><td>audio/x-adpcm-ms</td></tr>
+	<tr><td>c2.mtk.alac.decoder</td><td>audio/alac</td></tr>
+	<tr><td>OMX.MTK.AUDIO.DECODER.ALAC</td><td>audio/alac</td></tr>
+	<tr><td>c2.mtk.ape.decoder</td><td>audio/ape</td></tr>
+	<tr><td>OMX.MTK.AUDIO.DECODER.APE</td><td>audio/ape</td></tr>
+	<tr><td>c2.android.aac.decoder</td><td>audio/mp4a-latm</td></tr>
+	<tr><td>OMX.google.aac.decoder</td><td>audio/mp4a-latm</td></tr>
+	<tr><td>c2.android.amrnb.decoder</td><td>audio/3gpp</td></tr>
+	<tr><td>OMX.google.amrnb.decoder</td><td>audio/3gpp</td></tr>
+	<tr><td>c2.android.amrwb.decoder</td><td>audio/amr-wb</td></tr>
+	<tr><td>OMX.google.amrwb.decoder</td><td>audio/amr-wb</td></tr>
+	<tr><td>c2.android.flac.decoder</td><td>audio/flac</td></tr>
+	<tr><td>OMX.google.flac.decoder</td><td>audio/flac</td></tr>
+	<tr><td>c2.android.g711.alaw.decoder</td><td>audio/g711-alaw</td></tr>
+	<tr><td>OMX.google.g711.alaw.decoder</td><td>audio/g711-alaw</td></tr>
+	<tr><td>c2.android.g711.mlaw.decoder</td><td>audio/g711-mlaw</td></tr>
+	<tr><td>OMX.google.g711.mlaw.decoder</td><td>audio/g711-mlaw</td></tr>
+	<tr><td>c2.android.mp3.decoder</td><td>audio/mpeg</td></tr>
+	<tr><td>OMX.google.mp3.decoder</td><td>audio/mpeg</td></tr>
+	<tr><td>c2.android.opus.decoder</td><td>audio/opus</td></tr>
+	<tr><td>OMX.google.opus.decoder</td><td>audio/opus</td></tr>
+	<tr><td>c2.android.raw.decoder</td><td>audio/raw</td></tr>
+	<tr><td>OMX.google.raw.decoder</td><td>audio/raw</td></tr>
+	<tr><td>c2.android.vorbis.decoder</td><td>audio/vorbis</td></tr>
+	<tr><td>OMX.google.vorbis.decoder</td><td>audio/vorbis</td></tr>
+	<tr><td>OMX.MTK.AUDIO.DECODER.GSM</td><td>audio/gsm</td></tr>
+	<tr><td>c2.mtk.avc.decoder</td><td>video/avc</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.AVC</td><td>video/avc</td></tr>
+	<tr><td>c2.mtk.h263.decoder</td><td>video/3gpp</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.H263</td><td>video/3gpp</td></tr>
+	<tr><td>c2.mtk.hevc.decoder</td><td>video/hevc</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.HEVC</td><td>video/hevc</td></tr>
+	<tr><td>c2.mtk.mpeg2.decoder</td><td>video/mpeg2</td></tr>
+	<tr><td>c2.mtk.mpeg4.decoder</td><td>video/mp4v-es</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.MPEG4</td><td>video/mp4v-es</td></tr>
+	<tr><td>c2.mtk.vc1.decoder</td><td>video/x-ms-wmv</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.VC1</td><td>video/x-ms-wmv</td></tr>
+	<tr><td>c2.mtk.vp9.decoder</td><td>video/x-vnd.on2.vp9</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.VP9</td><td>video/x-vnd.on2.vp9</td></tr>
+	<tr><td>c2.mtk.vpx.decoder</td><td>video/x-vnd.on2.vp8</td></tr>
+	<tr><td>OMX.MTK.VIDEO.DECODER.VPX</td><td>video/x-vnd.on2.vp8</td></tr>
+	<tr><td>c2.android.av1.decoder</td><td>video/av01</td></tr>
+	<tr><td>c2.android.avc.decoder</td><td>video/avc</td></tr>
+	<tr><td>OMX.google.h264.decoder</td><td>video/avc</td></tr>
+	<tr><td>c2.android.h263.decoder</td><td>video/3gpp</td></tr>
+	<tr><td>OMX.google.h263.decoder</td><td>video/3gpp</td></tr>
+	<tr><td>c2.android.hevc.decoder</td><td>video/hevc</td></tr>
+	<tr><td>OMX.google.hevc.decoder</td><td>video/hevc</td></tr>
+	<tr><td>c2.android.mpeg4.decoder</td><td>video/mp4v-es</td></tr>
+	<tr><td>OMX.google.mpeg4.decoder</td><td>video/mp4v-es</td></tr>
+	<tr><td>c2.android.vp8.decoder</td><td>video/x-vnd.on2.vp8</td></tr>
+	<tr><td>OMX.google.vp8.decoder</td><td>video/x-vnd.on2.vp8</td></tr>
+	<tr><td>c2.android.vp9.decoder</td><td>video/x-vnd.on2.vp9</td></tr>
+	<tr><td>OMX.google.vp9.decoder</td><td>video/x-vnd.on2.vp9</td></tr>
+	<tr><td>c2.android.aac.encoder</td><td>audio/mp4a-latm</td></tr>
+	<tr><td>OMX.google.aac.encoder</td><td>audio/mp4a-latm</td></tr>
+	<tr><td>c2.android.amrnb.encoder</td><td>audio/3gpp</td></tr>
+	<tr><td>OMX.google.amrnb.encoder</td><td>audio/3gpp</td></tr>
+	<tr><td>c2.android.amrwb.encoder</td><td>audio/amr-wb</td></tr>
+	<tr><td>OMX.google.amrwb.encoder</td><td>audio/amr-wb</td></tr>
+	<tr><td>c2.android.flac.encoder</td><td>audio/flac</td></tr>
+	<tr><td>OMX.google.flac.encoder</td><td>audio/flac</td></tr>
+	<tr><td>c2.android.opus.encoder</td><td>audio/opus</td></tr>
+	<tr><td>c2.mtk.avc.encoder</td><td>video/avc</td></tr>
+	<tr><td>OMX.MTK.VIDEO.ENCODER.AVC</td><td>video/avc</td></tr>
+	<tr><td>c2.mtk.h263.encoder</td><td>video/3gpp</td></tr>
+	<tr><td>OMX.MTK.VIDEO.ENCODER.H263</td><td>video/3gpp</td></tr>
+	<tr><td>c2.mtk.mpeg4.encoder</td><td>video/mp4v-es</td></tr>
+	<tr><td>OMX.MTK.VIDEO.ENCODER.MPEG4</td><td>video/mp4v-es</td></tr>
+	<tr><td>c2.android.avc.encoder</td><td>video/avc</td></tr>
+	<tr><td>OMX.google.h264.encoder</td><td>video/avc</td></tr>
+	<tr><td>c2.android.h263.encoder</td><td>video/3gpp</td></tr>
+	<tr><td>OMX.google.h263.encoder</td><td>video/3gpp</td></tr>
+	<tr><td>c2.android.mpeg4.encoder</td><td>video/mp4v-es</td></tr>
+	<tr><td>OMX.google.mpeg4.encoder</td><td>video/mp4v-es</td></tr>
+	<tr><td>c2.android.vp8.encoder</td><td>video/x-vnd.on2.vp8</td></tr>
+	<tr><td>OMX.google.vp8.encoder</td><td>video/x-vnd.on2.vp8</td></tr>
+
+</table><h4>GL EXTENSIONS</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>GL_EXT_debug_marker</td></tr>
+	<tr><td>GL_ANDROID_extension_pack_es31a</td></tr>
+	<tr><td>GL_EXT_blend_minmax</td></tr>
+	<tr><td>GL_EXT_buffer_storage</td></tr>
+	<tr><td>GL_EXT_clear_texture</td></tr>
+	<tr><td>GL_EXT_clip_control</td></tr>
+	<tr><td>GL_EXT_color_buffer_float</td></tr>
+	<tr><td>GL_EXT_color_buffer_half_float</td></tr>
+	<tr><td>GL_EXT_conservative_depth</td></tr>
+	<tr><td>GL_EXT_copy_image</td></tr>
+	<tr><td>GL_EXT_discard_framebuffer</td></tr>
+	<tr><td>GL_EXT_draw_buffers</td></tr>
+	<tr><td>GL_EXT_draw_buffers_indexed</td></tr>
+	<tr><td>GL_EXT_draw_elements_base_vertex</td></tr>
+	<tr><td>GL_EXT_EGL_image_array</td></tr>
+	<tr><td>GL_EXT_external_buffer</td></tr>
+	<tr><td>GL_EXT_float_blend</td></tr>
+	<tr><td>GL_EXT_geometry_point_size</td></tr>
+	<tr><td>GL_EXT_geometry_shader</td></tr>
+	<tr><td>GL_EXT_gpu_shader5</td></tr>
+	<tr><td>GL_EXT_memory_object</td></tr>
+	<tr><td>GL_EXT_memory_object_fd</td></tr>
+	<tr><td>GL_EXT_multi_draw_arrays</td></tr>
+	<tr><td>GL_EXT_multisampled_render_to_texture</td></tr>
+	<tr><td>GL_EXT_multisampled_render_to_texture2</td></tr>
+	<tr><td>GL_EXT_occlusion_query_boolean</td></tr>
+	<tr><td>GL_EXT_polygon_offset_clamp</td></tr>
+	<tr><td>GL_EXT_primitive_bounding_box</td></tr>
+	<tr><td>GL_EXT_pvrtc_sRGB</td></tr>
+	<tr><td>GL_EXT_read_format_bgra</td></tr>
+	<tr><td>GL_EXT_robustness</td></tr>
+	<tr><td>GL_EXT_separate_shader_objects</td></tr>
+	<tr><td>GL_EXT_shader_framebuffer_fetch</td></tr>
+	<tr><td>GL_EXT_shader_group_vote</td></tr>
+	<tr><td>GL_EXT_shader_implicit_conversions</td></tr>
+	<tr><td>GL_EXT_shader_io_blocks</td></tr>
+	<tr><td>GL_EXT_shader_non_constant_global_initializers</td></tr>
+	<tr><td>GL_EXT_shader_pixel_local_storage</td></tr>
+	<tr><td>GL_EXT_shader_pixel_local_storage2</td></tr>
+	<tr><td>GL_EXT_shader_texture_lod</td></tr>
+	<tr><td>GL_EXT_sparse_texture</td></tr>
+	<tr><td>GL_EXT_sRGB_write_control</td></tr>
+	<tr><td>GL_EXT_tessellation_shader</td></tr>
+	<tr><td>GL_EXT_texture_border_clamp</td></tr>
+	<tr><td>GL_EXT_texture_buffer</td></tr>
+	<tr><td>GL_EXT_texture_cube_map_array</td></tr>
+	<tr><td>GL_EXT_texture_format_BGRA8888</td></tr>
+	<tr><td>GL_EXT_texture_format_sRGB_override</td></tr>
+	<tr><td>GL_EXT_texture_rg</td></tr>
+	<tr><td>GL_EXT_texture_shadow_lod</td></tr>
+	<tr><td>GL_EXT_texture_sRGB_decode</td></tr>
+	<tr><td>GL_EXT_texture_sRGB_R8</td></tr>
+	<tr><td>GL_EXT_texture_sRGB_RG8</td></tr>
+	<tr><td>GL_EXT_YUV_target</td></tr>
+	<tr><td>GL_IMG_framebuffer_downsample</td></tr>
+	<tr><td>GL_IMG_multisampled_render_to_texture</td></tr>
+	<tr><td>GL_IMG_program_binary</td></tr>
+	<tr><td>GL_IMG_read_format</td></tr>
+	<tr><td>GL_IMG_shader_binary</td></tr>
+	<tr><td>GL_IMG_texture_compression_pvrtc</td></tr>
+	<tr><td>GL_IMG_texture_compression_pvrtc2</td></tr>
+	<tr><td>GL_IMG_texture_format_BGRA8888</td></tr>
+	<tr><td>GL_IMG_texture_npot</td></tr>
+	<tr><td>GL_KHR_blend_equation_advanced</td></tr>
+	<tr><td>GL_KHR_blend_equation_advanced_coherent</td></tr>
+	<tr><td>GL_KHR_debug</td></tr>
+	<tr><td>GL_KHR_robustness</td></tr>
+	<tr><td>GL_KHR_texture_compression_astc_ldr</td></tr>
+	<tr><td>GL_OES_compressed_ETC1_RGB8_texture</td></tr>
+	<tr><td>GL_OES_depth24</td></tr>
+	<tr><td>GL_OES_depth_texture</td></tr>
+	<tr><td>GL_OES_draw_buffers_indexed</td></tr>
+	<tr><td>GL_OES_draw_elements_base_vertex</td></tr>
+	<tr><td>GL_OES_EGL_image</td></tr>
+	<tr><td>GL_OES_EGL_image_external</td></tr>
+	<tr><td>GL_OES_EGL_image_external_essl3</td></tr>
+	<tr><td>GL_OES_EGL_sync</td></tr>
+	<tr><td>GL_OES_element_index_uint</td></tr>
+	<tr><td>GL_OES_fragment_precision_high</td></tr>
+	<tr><td>GL_OES_geometry_point_size</td></tr>
+	<tr><td>GL_OES_geometry_shader</td></tr>
+	<tr><td>GL_OES_get_program_binary</td></tr>
+	<tr><td>GL_OES_gpu_shader5</td></tr>
+	<tr><td>GL_OES_mapbuffer</td></tr>
+	<tr><td>GL_OES_packed_depth_stencil</td></tr>
+	<tr><td>GL_OES_required_internalformat</td></tr>
+	<tr><td>GL_OES_rgb8_rgba8</td></tr>
+	<tr><td>GL_OES_sample_shading</td></tr>
+	<tr><td>GL_OES_sample_variables</td></tr>
+	<tr><td>GL_OES_shader_image_atomic</td></tr>
+	<tr><td>GL_OES_shader_io_blocks</td></tr>
+	<tr><td>GL_OES_shader_multisample_interpolation</td></tr>
+	<tr><td>GL_OES_standard_derivatives</td></tr>
+	<tr><td>GL_OES_surfaceless_context</td></tr>
+	<tr><td>GL_OES_tessellation_point_size</td></tr>
+	<tr><td>GL_OES_tessellation_shader</td></tr>
+	<tr><td>GL_OES_texture_border_clamp</td></tr>
+	<tr><td>GL_OES_texture_buffer</td></tr>
+	<tr><td>GL_OES_texture_cube_map_array</td></tr>
+	<tr><td>GL_OES_texture_float</td></tr>
+	<tr><td>GL_OES_texture_half_float</td></tr>
+	<tr><td>GL_OES_texture_npot</td></tr>
+	<tr><td>GL_OES_texture_stencil8</td></tr>
+	<tr><td>GL_OES_texture_storage_multisample_2d_array</td></tr>
+	<tr><td>GL_OES_vertex_array_object</td></tr>
+
+</table><h4>DEVICE FEATURES</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>android.hardware.audio.low_latency</td></tr>
+	<tr><td>android.hardware.audio.output</td></tr>
+	<tr><td>android.hardware.biometrics.face</td></tr>
+	<tr><td>android.hardware.bluetooth</td></tr>
+	<tr><td>android.hardware.bluetooth_le</td></tr>
+	<tr><td>android.hardware.camera</td></tr>
+	<tr><td>android.hardware.camera.any</td></tr>
+	<tr><td>android.hardware.camera.autofocus</td></tr>
+	<tr><td>android.hardware.camera.capability.manual_post_processing</td></tr>
+	<tr><td>android.hardware.camera.capability.manual_sensor</td></tr>
+	<tr><td>android.hardware.camera.flash</td></tr>
+	<tr><td>android.hardware.camera.front</td></tr>
+	<tr><td>android.hardware.camera.level.full</td></tr>
+	<tr><td>android.hardware.faketouch</td></tr>
+	<tr><td>android.hardware.fingerprint</td></tr>
+	<tr><td>android.hardware.hardware_keystore</td></tr>
+	<tr><td>android.hardware.location</td></tr>
+	<tr><td>android.hardware.location.gps</td></tr>
+	<tr><td>android.hardware.location.network</td></tr>
+	<tr><td>android.hardware.microphone</td></tr>
+	<tr><td>android.hardware.opengles.aep</td></tr>
+	<tr><td>android.hardware.ram.normal</td></tr>
+	<tr><td>android.hardware.screen.landscape</td></tr>
+	<tr><td>android.hardware.screen.portrait</td></tr>
+	<tr><td>android.hardware.security.model.compatible</td></tr>
+	<tr><td>android.hardware.sensor.accelerometer</td></tr>
+	<tr><td>android.hardware.sensor.light</td></tr>
+	<tr><td>android.hardware.sensor.proximity</td></tr>
+	<tr><td>android.hardware.sensor.stepcounter</td></tr>
+	<tr><td>android.hardware.sensor.stepdetector</td></tr>
+	<tr><td>android.hardware.telephony</td></tr>
+	<tr><td>android.hardware.telephony.gsm</td></tr>
+	<tr><td>android.hardware.telephony.ims</td></tr>
+	<tr><td>android.hardware.touchscreen</td></tr>
+	<tr><td>android.hardware.touchscreen.multitouch</td></tr>
+	<tr><td>android.hardware.touchscreen.multitouch.distinct</td></tr>
+	<tr><td>android.hardware.touchscreen.multitouch.jazzhand</td></tr>
+	<tr><td>android.hardware.usb.accessory</td></tr>
+	<tr><td>android.hardware.usb.host</td></tr>
+	<tr><td>android.hardware.vulkan.compute</td></tr>
+	<tr><td>android.hardware.vulkan.level</td></tr>
+	<tr><td>android.hardware.vulkan.version</td></tr>
+	<tr><td>android.hardware.wifi</td></tr>
+	<tr><td>android.hardware.wifi.direct</td></tr>
+	<tr><td>android.hardware.wifi.passpoint</td></tr>
+	<tr><td>android.software.activities_on_secondary_displays</td></tr>
+	<tr><td>android.software.adoptable_storage</td></tr>
+	<tr><td>android.software.app_enumeration</td></tr>
+	<tr><td>android.software.app_widgets</td></tr>
+	<tr><td>android.software.autofill</td></tr>
+	<tr><td>android.software.backup</td></tr>
+	<tr><td>android.software.cant_save_state</td></tr>
+	<tr><td>android.software.companion_device_setup</td></tr>
+	<tr><td>android.software.connectionservice</td></tr>
+	<tr><td>android.software.controls</td></tr>
+	<tr><td>android.software.cts</td></tr>
+	<tr><td>android.software.device_admin</td></tr>
+	<tr><td>android.software.file_based_encryption</td></tr>
+	<tr><td>android.software.home_screen</td></tr>
+	<tr><td>android.software.incremental_delivery</td></tr>
+	<tr><td>android.software.input_methods</td></tr>
+	<tr><td>android.software.ipsec_tunnels</td></tr>
+	<tr><td>android.software.live_wallpaper</td></tr>
+	<tr><td>android.software.managed_users</td></tr>
+	<tr><td>android.software.midi</td></tr>
+	<tr><td>android.software.picture_in_picture</td></tr>
+	<tr><td>android.software.print</td></tr>
+	<tr><td>android.software.secure_lock_screen</td></tr>
+	<tr><td>android.software.securely_removes_users</td></tr>
+	<tr><td>android.software.verified_boot</td></tr>
+	<tr><td>android.software.voice_recognizers</td></tr>
+	<tr><td>android.software.vulkan.deqp.level</td></tr>
+	<tr><td>android.software.webview</td></tr>
+	<tr><td>com.google.android.apps.dialer.SUPPORTED</td></tr>
+	<tr><td>com.google.android.feature.ASI</td></tr>
+	<tr><td>com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE</td></tr>
+	<tr><td>com.google.android.feature.PERSONAL_SAFETY</td></tr>
+	<tr><td>com.google.android.feature.TURBO_PRELOAD</td></tr>
+	<tr><td>com.google.android.feature.WELLBEING</td></tr>
+
+</table><h4>DEVICES</h4>
+<h4>I2C:</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>i2c-0:</td></tr>
+	<tr><td>0x41 chipone-tddi</td></tr>
+	<tr><td>i2c-2:</td></tr>
+	<tr><td>0xc MAINAF</br>0x10 ccu_i2c_2_hwtrg</br>0x1a kd_camera_hw</br>0x50 CAM_CAL_DRV</td></tr>
+	<tr><td>i2c-3:</td></tr>
+	<tr><td>0x34 speaker_amp</td></tr>
+	<tr><td>i2c-4:</td></tr>
+	<tr><td>0xc MAIN2AF</br>0x11 ccu_i2c_4_hwtrg</br>0x2d kd_camera_hw_bus2</br>0x3d kd_camera_hw_bus3</br>0x50 CAM_CAL_DEV3</td></tr>
+	<tr><td>i2c-5:</td></tr>
+	<tr><td>0x34 mt6370_pmu</br>0x4e usb_type_c</td></tr>
+
+</table><h4>SPI:</h4>
+<table class="tcommon table-sm table-striped">
+	<tr><td>silead_fp_spi (spi0.0)</td></tr>
+
+</table>
+<p>Created by Device Info HW+ ver 5.22.1</p>
+	</div>
+</div>
+</body>
+</html>

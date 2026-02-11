@@ -1,0 +1,23 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system_ext.brand=Digit
+ro.product.system_ext.device=Digitnext_Ultra
+ro.product.system_ext.manufacturer=Digit
+ro.product.system_ext.model=Digitnext_Ultra
+ro.product.system_ext.name=Digitnext_Ultra
+ro.system_ext.build.date=Thu Jan 11 15:42:37 CST 2024
+ro.system_ext.build.date.utc=1704958957
+ro.system_ext.build.fingerprint=Digit/Digitnext_Ultra/Digitnext_Ultra:13/SP1A.210812.016/1704853980:user/release-keys
+ro.system_ext.build.id=SP1A.210812.016
+ro.system_ext.build.tags=release-keys
+ro.system_ext.build.type=user
+ro.system_ext.build.version.incremental=1704853980
+ro.system_ext.build.version.release=13
+ro.system_ext.build.version.release_or_codename=13
+ro.system_ext.build.version.sdk=33
+####################################
+# from variable PRODUCT_SYSTEM_EXT_PROPERTIES
+####################################
+# end of file

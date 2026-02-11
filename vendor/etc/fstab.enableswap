@@ -1,0 +1,2 @@
+# /dev/block/zram0 none swap defaults zramsize=65% swapprio=8 zram_backing_dev_path=/data/per_boot/zram_swap zram_backingdev_size=2097152
+# /data/swap2      none swap defaults zramsize=50% 

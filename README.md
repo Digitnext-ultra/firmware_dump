@@ -1,0 +1,20 @@
+## sys_mssi_64_ww-user 13 SP1A.210812.016 1704853980 release-keys
+- Manufacturer: digit
+- Platform: mt6765
+- Codename: Digitnext_Ultra
+- Brand: Digit
+- Flavor: sys_mssi_64_ww-user
+- Release Version: 13
+- Kernel Version: 4.19.191
+- Id: SP1A.210812.016
+- Incremental: 1704853980
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: true
+- Treble Device: true
+- Locale: en-PK
+- Screen Density: undefined
+- Fingerprint: Digit/Digitnext_Ultra/Digitnext_Ultra:12/SP1A.210812.016/1704853980:user/release-keys
+- OTA version: 
+- Branch: sys_mssi_64_ww-user-13-SP1A.210812.016-1704853980-release-keys
+- Repo: digit_digitnext_ultra_dump
